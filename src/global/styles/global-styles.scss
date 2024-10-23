@@ -1,0 +1,75 @@
+@import './resetting.scss';
+
+@import './assets/all.scss';
+@import './fonts/all.scss';
+
+$custom-pointer: pointer;
+
+html {
+  &:root {
+    --body-color: $white-color;
+    --bg-color: $white-color;
+    --text-color: $black-color;
+  }
+
+  * {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      user-select: none;
+    }
+  }
+}
+
+body {
+  height: 100dvh;
+  min-width: $min-width-device;
+  max-width: $max-width-device;
+  position: relative;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  font-family: $fonts;
+  line-height: normal;
+}
+
+div,
+section {
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button {
+  cursor: $custom-pointer;
+  user-select: none;
+}
+
+a {
+
+  &,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+    cursor: $custom-pointer;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+p {
+  overflow: visible;
+  display: inline-block;
+  text-overflow: ellipsis;
+}

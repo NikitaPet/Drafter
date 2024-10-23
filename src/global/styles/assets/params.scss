@@ -1,0 +1,5 @@
+@import '@global-styles-assets/breakpoints.scss';
+
+$main-container-width: min(calc(100dvw), $desktop-start);
+$module-base-padding: calc((100% - $main-container-width)/2);
+
