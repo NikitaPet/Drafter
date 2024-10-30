@@ -1,0 +1,9 @@
+@media #{$tablet} {
+    .form {
+        align-items: flex-start;
+
+        .string {
+            text-align: unset;
+        }
+    }
+}

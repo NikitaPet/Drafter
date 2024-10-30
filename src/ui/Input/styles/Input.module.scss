@@ -2,9 +2,8 @@
 
 .input {
     position: relative;
-    height: 44px;
+    height: 40px;
     border: 1px solid #D1D1D1;
-    border-radius: 8px;
 
     padding: 14px 16px;
     background: $white-color;
@@ -18,7 +17,7 @@
     line-height: 17px;
     text-align: left;
     color: $black-color;
-    
+
     cursor: pointer;
 
     &::placeholder {

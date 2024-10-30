@@ -1,17 +1,29 @@
-import { create } from 'zustand'
+export { Provider } from 'react-redux'
+import { combineReducers } from 'redux'
+import { configureStore } from '@reduxjs/toolkit'
+import { createWrapper } from 'next-redux-wrapper'
 
-const useStore = create<State>()((set) => ({
-    name: '',
-    setName: (newName) =>
-        set((state) => {
-            state.name = newName
-            return { ...state }
-        }),
-}))
+import api from '@/store/api'
+import slices from '@/store/slices'
+import { type Store, type Middleware, type PreloadedState } from './types'
 
-interface State {
-    name: string
-    setName: (newName: string) => void
-}
 
-export default useStore
+
+export const reducer = combineReducers({
+    [api.reducerPath]: api.reducer,
+    [slices.name]: slices.reducer,
+})
+
+export const middleware: Middleware = (getMiddleware) =>
+    getMiddleware({ serializableCheck: false }).concat([api.middleware])
+
+
+export const createStore = (preloadedState: PreloadedState) =>
+    configureStore({ reducer, middleware, preloadedState })
+
+export const store = createStore({})
+export default store
+
+export const wrapper = createWrapper<Store>(createStore, { debug: true })
+
+

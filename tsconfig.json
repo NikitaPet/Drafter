@@ -5,8 +5,11 @@
             "@/*": ["*"],
             "@app/*": ["app/*"],
             "@layout/*": ["app/(layout)/*"],
+            "@mainpage/*": ["app/(mainpage)/*"],
             "@global/*": ["global/*"],
+            "@config/*": ["global/config/*"],
             "@global-hooks/*": ["global/hooks/*"],
+            "@global-styles/*": ["global/styles/*"],
             "@global-styles-assets/*": ["global/styles/assets/*"],
             "@global-styles-fonts/*": ["global/styles/fonts/*"],
             "@containers/*": ["containers/*"]

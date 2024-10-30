@@ -1,0 +1,14 @@
+@media #{$tablet} {
+    .form {
+        align-items: flex-start;
+
+        .string {
+            text-align: unset;
+        }
+
+        .select {
+            min-height: 40px;
+            width: 400px;
+        }
+    }
+}

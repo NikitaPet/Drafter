@@ -1,19 +1,21 @@
 import cn from 'classnames'
-import Header from '@layout/Header'
-import Inter from '@/global/styles/fonts/Inter'
-import WorkSans from '@/global/styles/fonts/WorkSans'
+import Providers from '@layout/modules/Providers'
+import Header from '@layout/modules/Header'
+import { Inter } from '@global-styles/fonts'
 
 import 'global/styles/global-styles.scss'
 import styles from '@layout/styles/layout.module.scss'
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="ru" className={cn(Inter.variable, WorkSans.variable)}>
+        <html lang="ru" className={cn(Inter.variable)}>
             <body>
-                <div id={'layout'} className={styles.wrapper}>
-                    <Header />
-                    <main>{children}</main>
-                </div>
+                <Providers>
+                    <div id={'layout'} className={styles.wrapper}>
+                        <Header />
+                        <main>{children}</main>
+                    </div>
+                </Providers>
             </body>
         </html>
     )

@@ -1,0 +1,29 @@
+@media #{$tablet} {
+    .filters {
+        gap: 40px;
+
+        .filter {
+            width: 200px;
+        }
+    }
+
+    .table {
+        .titles {
+            .cell {
+                min-width: 60px;
+            }
+
+            .filter-icon {
+                height: 100%;
+                width: 40px;
+                min-width: 40px;
+            }
+        }
+
+        .content {
+            .cell {
+                min-width: 60px;
+            }
+        }
+    }
+}

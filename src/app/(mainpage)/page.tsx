@@ -1,10 +1,10 @@
 import Modules from '@containers/PageModules'
-import NameForm from './NameForm'
+import Table from './Table'
 
 export default function Page() {
     return (
         <Modules>
-            <NameForm />
+            <Table />
         </Modules>
     )
 }

@@ -1,0 +1,30 @@
+@import '@global-styles-assets/all.scss';
+
+.textarea {
+    position: relative;
+    height: 400px;
+    border: 1px solid #D1D1D1;
+    resize: none;
+    padding: 14px 16px;
+    background: $white-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: left;
+    color: $black-color;
+
+    cursor: pointer;
+
+    &::placeholder {
+        color: #ACACAC;
+    }
+
+    &.error {
+        border: 2px solid $red-color;
+    }
+}
